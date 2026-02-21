@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mumbi Kashimilo Soft Loans</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+header {
+    background: #0A2E5C;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    background: #4A90E2;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+}
+
+.hero {
+    background: linear-gradient(to right, #0A2E5C, #4A90E2);
+    color: white;
+    text-align: center;
+    padding: 60px;
+}
+
+button {
+    background: #0A2E5C;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: #0A2E5C;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>MUMBI KASHIMILO’s SOFT LOANS INNOVATIONS</h1>
+<p>We Lend a Hand to an Eye with Vision</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#calculator">Loan Calculator</a>
+<a href="#apply">Apply</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<h2>Fast Collateral-Based Loans</h2>
+<p>K1,000 — K100,000</p>
+<button onclick="scrollToApply()">Apply Now</button>
+</section>
+
+<section id="calculator">
+<div class="card">
+<h2>Loan Calculator</h2>
+
+<label>Loan Amount:</label>
+<input type="number" id="amount"><br><br>
+
+<label>Period:</label>
+<select id="period">
+<option value="0.10">12 Hours (10%)</option>
+<option value="0.25">1 Week (25%)</option>
+<option value="0.35">2 Weeks (35%)</option>
+<option value="0.45">3 Weeks (45%)</option>
+<option value="0.48">1 Month (48%)</option>
+<option value="0.76">2 Months (38% per month)</option>
+</select><br><br>
+
+<button onclick="calculateLoan()">Calculate</button>
+
+<h3 id="result"></h3>
+</div>
+</section>
+
+<section id="apply">
+<div class="card">
+<h2>Loan Application</h2>
+
+<input placeholder="Full Name"><br><br>
+<input placeholder="NRC Number"><br><br>
+<input placeholder="Phone Number"><br><br>
+<input placeholder="Address"><br><br>
+
+<label>Loan Amount</label>
+<input type="number"><br><br>
+
+<label>Collateral Description</label>
+<input><br><br>
+
+<button>Submit Application</button>
+</div>
+</section>
+
+<section id="contact">
+<div class="card">
+<h2>Contact</h2>
+<p>📞 +260 975 620190</p>
+<p>📍 Ridgeway / Kaunda Square / Kabwata / 6 Miles</p>
+<p>✉️ Mumbikash@gmail.com</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Mumbi Kashimilo Soft Loans Innovations</p>
+</footer>
+
+<script>
+function calculateLoan() {
+    let amount = document.getElementById("amount").value;
+    let rate = document.getElementById("period").value;
+
+    let interest = amount * rate;
+    let total = parseFloat(amount) + parseFloat(interest);
+
+    document.getElementById("result").innerHTML =
+        "Interest: K" + interest.toFixed(2) +
+        "<br>Total Repayment: K" + total.toFixed(2);
+}
+
+function scrollToApply() {
+    document.getElementById("apply").scrollIntoView();
+}
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mumbi Kashimilo Soft Loans</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+header {
+    background: #0A2E5C;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    background: #4A90E2;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+}
+
+.hero {
+    background: linear-gradient(to right, #0A2E5C, #4A90E2);
+    color: white;
+    text-align: center;
+    padding: 60px;
+}
+
+button {
+    background: #0A2E5C;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: #0A2E5C;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>MUMBI KASHIMILO’s SOFT LOANS INNOVATIONS</h1>
+<p>We Lend a Hand to an Eye with Vision</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#calculator">Loan Calculator</a>
+<a href="#apply">Apply</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<h2>Fast Collateral-Based Loans</h2>
+<p>K1,000 — K100,000</p>
+<button onclick="scrollToApply()">Apply Now</button>
+</section>
+
+<section id="calculator">
+<div class="card">
+<h2>Loan Calculator</h2>
+
+<label>Loan Amount:</label>
+<input type="number" id="amount"><br><br>
+
+<label>Period:</label>
+<select id="period">
+<option value="0.10">12 Hours (10%)</option>
+<option value="0.25">1 Week (25%)</option>
+<option value="0.35">2 Weeks (35%)</option>
+<option value="0.45">3 Weeks (45%)</option>
+<option value="0.48">1 Month (48%)</option>
+<option value="0.76">2 Months (38% per month)</option>
+</select><br><br>
+
+<button onclick="calculateLoan()">Calculate</button>
+
+<h3 id="result"></h3>
+</div>
+</section>
+
+<section id="apply">
+<div class="card">
+<h2>Loan Application</h2>
+
+<input placeholder="Full Name"><br><br>
+<input placeholder="NRC Number"><br><br>
+<input placeholder="Phone Number"><br><br>
+<input placeholder="Address"><br><br>
+
+<label>Loan Amount</label>
+<input type="number"><br><br>
+
+<label>Collateral Description</label>
+<input><br><br>
+
+<button>Submit Application</button>
+</div>
+</section>
+
+<section id="contact">
+<div class="card">
+<h2>Contact</h2>
+<p>📞 +260 975 620190</p>
+<p>📍 Ridgeway / Kaunda Square / Kabwata / 6 Miles</p>
+<p>✉️ Mumbikash@gmail.com</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Mumbi Kashimilo Soft Loans Innovations</p>
+</footer>
+
+<script>
+function calculateLoan() {
+    let amount = document.getElementById("amount").value;
+    let rate = document.getElementById("period").value;
+
+    let interest = amount * rate;
+    let total = parseFloat(amount) + parseFloat(interest);
+
+    document.getElementById("result").innerHTML =
+        "Interest: K" + interest.toFixed(2) +
+        "<br>Total Repayment: K" + total.toFixed(2);
+}
+
+function scrollToApply() {
+    document.getElementById("apply").scrollIntoView();
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<h3>Applications</h3>
+
+<table border="1" cellpadding="10">
+<tr>
+<th>Name</th>
+<th>Amount</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>John Banda</td>
+<td>K5,000</td>
+<td>Pending</td>
+<td>
+<button>Approve</button>
+<button>Reject</button>
+</td>
+</tr>
+
+</table>
+
+</body>
+</html>
