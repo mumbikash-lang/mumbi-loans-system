@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumbi Kashimilo Soft Loans</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: auto; padding: 20px; }
+        h1 { text-align: center; }
+        form { display: flex; flex-direction: column; }
+        label { margin: 10px 0 5px; }
+        input, select { padding: 10px; margin-bottom: 10px; }
+        button { padding: 10px; background-color: #28a745; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mumbi Kashimilo Soft Loans</h1>
+        <div id="loan-calculator">
+            <h2>Loan Calculator</h2>
+            <label for="loan-amount">Loan Amount:</label>
+            <input type="number" id="loan-amount" placeholder="Enter amount" required>
+
+            <label for="repayment-period">Repayment Period (Months):</label>
+            <select id="repayment-period">
+                <option value="6">6</option>
+                <option value="12">12</option>
+                <option value="24">24</option>
+                <option value="36">36</option>
+            </select>
+
+            <button id="calculate">Calculate</button>
+            <h3 id="monthly-repayment"></h3>
+        </div>
+
+        <h2>Loan Application Form</h2>
+        <form id="loan-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="amount">Amount Requested:</label>
+            <input type="number" id="amount" required>
+
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <div id="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: support@mumbikash.com</p>
+            <p>Phone: +123456789</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('calculate').addEventListener('click', function() {
+            const amount = document.getElementById('loan-amount').value;
+            const period = document.getElementById('repayment-period').value;
+            const interestRate = 0.05;  // Example interest rate
+            const monthlyRepayment = (amount * (interestRate / 12))/(1 - Math.pow(1 + (interestRate / 12), -period));
+            document.getElementById('monthly-repayment').textContent = `Monthly Repayment: $${monthlyRepayment.toFixed(2)}`;
+        });
+
+        document.getElementById('loan-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const amount = document.getElementById('amount').value;
+
+            // API call for form submission
+            fetch('https://api.mumbikash.com/submit-loan', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({name, email, amount})
+            })
+            .then(response => response.json())
+            .then(data => alert('Application submitted successfully!'))
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
